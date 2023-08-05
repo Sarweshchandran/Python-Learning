@@ -1,0 +1,154 @@
+Tuples:
+
+    Tuples are used to store multiple items in a single variable.
+    It is one of 4 built-in- data types in Python used to store collections of data, the other 3 
+    are List, set, and Dictionary.
+    
+    The tuple is a collection which is ordered and unchangeable in nature.
+    
+    The tuple is written with round brackets.
+    
+    Example: thistuple = ("apple","banana", "cherry")
+    print(thistuple)
+    
+Tuple Items:
+
+    The tuple items are ordered, unchangeable, and allow duplicate values.
+    The items are indexed, the first item has index[0], the second item has
+    [1] index and so on...
+
+    Ordered: 
+    When we say that tuples are ordered, it means that the items have a defined
+    order, that order will not change.
+    
+Unchangeable:
+
+    Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple
+    has been created.
+    
+    
+Allow Duplicates:
+
+    Since tuples are indexed, they can have items with the same value:
+    Example:
+    thistuple = ("apple","banana","cherry","apple","cherry")
+    
+Length of the Tuple:
+
+    To determine how many items a tuple has, use the len() function.
+    
+    Example:
+    thistuple = ("apple","banana","cherry")
+    print(len(thistuple))
+    
+    Output will be:
+    
+    3
+    
+**Note: To create a tuple with one item it is mandatory to create the tuple 
+item with a comma at the last, or else it will consider as a str.
+
+Example:
+
+thistuple = ('apple',) --> Valid tuple
+
+thistuple = ('apple') --> not tuple this will be considered as string 
+
+
+Tuple Data Types: -
+
+    Tuple can accept any data types such as string, integer, boolean.
+    
+    A Tuple can contain different data types within the same tuple.
+    
+    Example: 
+    tuple1 = ("abc", 34, True, 40, "male")
+    print(tuple1)
+    
+    
+The tuple() Constructor:
+
+    It is also possible to use the tuple() constructor to make a tuple.
+    
+    Example:
+    thistuple = tuple(("apple","banana","cherry"))
+    
+    print(thistuple)
+    
+    
+Python - Access Tuple Items
+
+Access Tuple Items:
+
+    We can access tuple items by referring to the index number, inside the square brackets.
+    
+    Example: -
+    thistuple = ("apple","banana","cherry")
+    print(thistuple[1])
+    
+Python - Update Tuples: -
+
+    As discussed earlier tuples are unchangeable, meaning that you cannot change, add, or remove items once 
+    it is created.
+    
+    But there are some workarounds.
+    
+
+Change Tuple Values: -
+
+    Once a tuple is created, you cannot change its values.  Tuples are unchangeable, or
+    immutable as it also is called.
+
+     But there is a workaround. We can convert the tuple into a list, change the list ,
+     and convert the corresponding list into a tuple.
+     
+     Example: -
+     
+     x = ("apple", "banana", "cherry")
+     y = list(x)
+     y[1] ="kiwi"
+     x = tuple(y)
+     print(x)
+     
+     
+Add Items: -
+
+    Since tuples are immutable, they do not have a built-in append() method, but there are
+    other ways to add items to a tuple.
+    
+    Method 1: -
+    
+    Convert into a list: Similar like the workaround for changing a tuple, you can convert it 
+    into a list, add your item(s), and convert it back into a tuple.
+    
+    Example: refer workaround example.
+    
+    
+    Method 2: -
+    
+    We are allowed to add tuples to tuples, so if you want to addd one item, (or many), create
+    a new tuple with the item(s). and add it to the existing tuple.
+    
+    Example: -
+    
+    thistuple = ("apple","banana","cherry")
+    y = ("orange",)
+    thistuple +=y
+    print(thistuple)
+    
+Remove Items: -
+
+    We cannot remove items in a tuple.
+    
+    Tuples are unchangeable, so you cannot remove items from it, but you can use the same
+    workaround as we used for changing and adding tuple items:
+    
+    Example: -
+    
+    thistuple = ("apple", "banana", "cherry")
+    y = list(thistuple)
+    y.remove("apple")
+    thistuple = tuple(y)
+    
+    We are able to delete the tuple completely by using the del keyword, after deleting the 
+    tuple we tuple and deleted and cannot be accessed by user or can't able to print.

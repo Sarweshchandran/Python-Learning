@@ -1,0 +1,172 @@
+Sets:
+
+    Sets are used to store multiple items in a single variable.
+    
+    A set is a collection which is unordered, unchangeable, but you can remove items and add new items
+    and unindexed.
+    
+    Sets are written with curly brackets.
+    
+    Example of set:
+    
+    thisset = {'apple,'banana','cherry'}
+    print(thisset)
+    
+    *Note: 1. As sets is unordered so, we cannot be sure in which order it might appear. 
+           2. Set items are unordered, unchangeable, and do not allow duplicate values.
+           3. Unordered means that the items in a set do not have a defined order.
+           4. Set items can appear in a different order every time you use them, and cannot be
+              reffered to by index or key.
+              
+           5. Set items are unchangeable, meaning that we cannot change the items after the set has
+              been created.
+              
+           6. Once a set is created, you cannot change its items, but you can remove items
+              and add new items.
+              
+           7. Duplicates Not Allowed: Sets cannot have two items with the same value.
+              Example: Duplicate value will be ignored:
+              thisset = {"apple","banana","cherry","apple"}
+              print(thisset)
+              Output:
+              {'banana','cherry','apple'}
+              
+           8. ***The values True and 1 are considered the same value in sets, and are treated as duplicates.
+           
+Length of the sets:
+
+    The length of the sets can be determined by using the len() function.
+    
+    Example:
+    thisset = {'apple','banana','cherry'}
+    print(len(thisset))
+    
+    Output:3
+    
+Set Items-Data Types:
+
+    Set items can be of any data type:
+    
+        ->String    ->boolean
+        ->int       ->Combination of String, int, boolean
+        
+The set() Constructor:
+
+    The set() cosntructor is used to make a set.
+    
+    Example:
+    thisset = set('apple','banana','cherry')
+    print(thisset)
+    Output:
+    {'cherry','banana','apple'}
+    
+Access Items:
+
+    we cannot access items in a set by reffering to an index ora key.
+    
+    But we can loop through the set items using a for loop, or ask if a specified value is present in a set,
+    by using the in keyword.
+    
+    Example:
+    thisset = {'apple','banana','cherry'}
+    
+    for x in thisset:               | print("banana" in thisset)    
+        print(X)                    | Output:
+                                    |   True
+    Output:                         |
+    {'banana','apple','cherry'}     |            
+                                    |
+                                    |
+                                    |
+                                    
+Add Items:
+
+    In sets the items can be added using the add() method.
+    
+    Example:
+    thisset = {"apple","banana","cherry"}
+    thisset.add("orange")
+    print(thisset)
+    Output:
+    {'orange','apple','cherry','banana'}
+    
+    The second way to add items from another set into the current set is to use the update() method.
+    
+    Example:
+    thisset = {"apple","banana","cherry"}
+    tropical = {"pineapple","mango","papaya"}
+    
+    thisset.update(tropical)
+    
+    print(thisset)
+    Output: {'pineapple','papaya','apple','mango','banana','cherry'}
+    
+    The Object in the update() method does not have to be a set, it can be any iterable object(tuples, lists,dictonaris, etc.,)
+    
+    Example:
+    thisset = {"apple","banana","cherry"}
+    mylist = ["kiwi","orange"]
+    
+    thisset.update(mylist)
+    
+    print(thisset)
+    
+    Output:
+    {'kiwi','orange','cherry','apple','banana'}
+    
+Join Two Sets:
+
+    There are several ways to join two or more sets in python.
+    
+    union() method: This return a new set containing all items from both sets.
+    update() method: This inserts all the items from one set into another. This both union()
+    and update() mehtods will exclude any duplicate items.
+    
+    Example:
+    set1 = {"a","b","c"}
+    set2 = {1,2,3}
+    set3 = set1.union(set2)
+    print(set3)
+    Output:
+    {'a','b',1,3,'c',2}
+    
+Keep ONLY the Duplicates:
+
+    The intersection_update() method will keep only the items that are present in both sets.
+    
+    Example:
+    x = {"apple","banana","cherry"}
+    y = {"google","microsoft","apple"}
+    x.intersection_update(y)
+    print(x)
+    Output:
+    {'apple'}
+    
+    The intersection() method will return a new set, that only contains the items that are present in both sets.
+    
+Keep All, But NOT the Duplicates:
+
+    The symmetric_difference_update() method will keep only the elements that are NOT present
+    in both sets.
+    
+    Example: 
+    x = {"apple","banana","cherry"}
+    y = {"google","microsoft","apple"}
+    
+    x.symmetric_difference_update(y)
+    print(x)
+    Output:
+    {'google', 'banana', 'microsoft', 'cherry'}
+    
+    The symmetric_difference() method will return a new set, that contains only the elements
+    that are NOT present in both sets.
+    
+    Example:
+    x = {"apple","banana","cherry"}
+    y = {"google","microsoft","apple"}
+    
+    z = x.symmetric_difference(y)
+    print(z)
+    Output:
+    {'banana', 'microsoft', 'cherry', 'google'}
+    

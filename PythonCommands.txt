@@ -1,0 +1,25 @@
+command to install the virtual environment in the python project:  pip install pipenv
+
+Command to activate the virtual environment: pipenv shell
+
+Command to install the python django framework: pip install django
+
+Command to check the current virtual environment: pipenv --venv
+
+Command to know the available commands in the django that can be used: django-admin
+
+Command to start new project in django: django-admin startproject "projectname"(to create project in new folder) or django-admin "projectname ."(to create a project folder in current directory)
+
+Command to run the server in the python project:  python manage.py runserver
+
+Command to run the server in the specified port of our python project:  python manage.py runserver "8001"(specified)
+
+Command to install the mysql in the python: pip install mysql
+
+Command to start the app in the django python frameword: python manage.py startapp "appname"
+
+Command to make the migration process activate using the following code: python manage.py makemigrations
+
+Command to migrate the models to migrate: python manage.py migrate
+
+

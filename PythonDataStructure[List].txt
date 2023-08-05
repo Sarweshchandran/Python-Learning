@@ -1,0 +1,311 @@
+Lists: -
+
+    Lists are used to store multiple items in a single variable.
+    
+    Lists are one of 4 built-in data types in python used ot store collections of 
+data, the other 3 are Tuple, Set and Dictionary,.
+
+    The lists are created using the square bracket[].
+    
+    Example: thislist=["Apple","Banana","Cherry"]
+    print(thislist)
+    
+List Length:
+
+    To determine how many items a ist has, use the len() function.
+    
+    Example:
+    
+    thislist=["Apple","Banana","Cherry"]
+    print(len(thislist))
+    
+    *Note: - List items can be of any data type(i.e., int, string,bool)
+    
+    * Note: - A list can contain different data types.
+    
+    Example: list1=["abc",34,True,"male"]
+
+List Constructor: -
+
+    It is also possible to use the list() constructor when creating new list
+    Example: thislist = list(("Apple","Banana","Cherry"))
+    print(thislist)
+    
+Important Note:
+
+    List is a collection which is ordered and changeable. Allows duplicate members.
+    Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+    Set is a collection which is unordered, unchangeable but we can remove/ or add items, and unindexed. No duplicate members.
+    Dictionary is a collection which is ordered and changeable. No duplicate members.
+    
+Inserting the items in the list:
+
+To insert a new list item, without replacing any of the existing values, we can use the insert() method in which we have to specify the index value.
+
+Example:
+thislist=["Apple","Banana","Cherry"]
+thislist.insert(2,"Watermelon")
+print(thislist)
+
+The Output will be:
+["Apple","Banana","Watermelon","Cherry"]
+
+Append Items:
+
+    To add an item to the end of the list, use the append() method:
+    
+    Example:
+    Using the append() method to append and item at the end of the list:
+    
+    thislist = ["Apple","Banana","Cherry"]
+    thislist.append("Orange")
+    print(thislist)
+    Output will be:
+    ["Apple","Banana","Cherry","Orange"]
+    
+Extend List:
+
+    To append elements from another list to the current list, use the extend() method.
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    tropical = =["mango","pineapple","papaya"]
+    thislist.extend(tropical)
+    print(thislist)
+    
+    Output will be:
+    ["Apple","Banana","Cherry","mango","pineapple","papaya"]
+    
+Add any Iterable:
+
+    The extend() method does not have to append lists,  you can add any iterable object(tuples, sets, dectionaries.,etc.,)
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    thistuple = ("kiwi","orange")
+    thislist.extend(thistuple)
+    print(thislist)
+    
+    Output will be:
+    
+    ["Apple","Banana","Cherry","kiwi","orange"]
+    
+Remove Specified Item:
+
+    The remove() method removes the specified item.
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    thislist.remove("Banana")
+    Output will be:
+    ["Apple","Cherry"]
+    
+Remove Specified Index:
+
+    The pop() method removes the specified index.
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    thislist.pop(1)
+    print(thislist)
+    
+    Output will be:
+    ["Apple","Cherry"]
+    
+    *Note: If the index is not specified in the pop method means the last index item will be deleted.
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    thislist.pop()
+    
+    Output will be:
+    ["Apple","Banana"]
+    
+del() method:
+
+    The del keyword also removes the specified index.
+    
+    Remove the first item:
+    
+    thislist = ["Apple","Banana","Cherry"]
+    del thislist[0]
+    print(thislist)
+    
+    Output will be:
+    ["Banana","Cherry"]
+    
+    *Note: The del keyword can also delete the list completely.
+    
+    Example:
+    Delete the entire list:
+    thislist = ["Apple","Banana","Cherry"]
+    del thislist
+    
+    Output will be:
+    Error displayed has successfully the list has been deleted.
+    
+Clear the List:
+
+    The clear() method empties the list.
+    The list still remains, but it has no content
+    
+    Example:
+    Clear the list content
+    thislist = ["Apple","Banana","Cherry"]
+    thislist.clear()
+    print(thislist)
+    
+    Output will be:
+    []
+    
+Loop Through a List:
+
+    We can loop through the list items by using a for loop:
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    for x in thislist:
+        print(x)
+      
+    Output will be:
+    
+    Apple
+    Banana
+    Cherry
+    
+Looping Through the Index Numbers:
+
+    We can also loop through the list items by referring to their index number.
+    Use the range() and len() functions to create a suitable iterable.
+    
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    for i in range(len(thislist)):
+        print(thislist(i))
+        
+    Output will be:
+    
+    Apple
+    Banana
+    Cherry
+    
+Using a While Loop:
+
+    We can loop through the list items by using a while loop.
+    Use the len() function to determine the length of th elist, then start at 0 and 
+    loop your way through the list items by referring to their indexes.
+
+    Example:
+    thislist = ["Apple","Banana","Cherry"]
+    i =0
+    while i < len(thislist):
+        print(thislist[i])
+        i = i+1
+Looping Using List Comprehension:
+
+    List Comprehension offers the shortest syntax for looping through lists:
+    
+    Example:
+    
+        A short hand for loop that will pnt all items in a list:
+        
+        thislist = ["Apple","Banana","Cherry"]
+        [print(x) for x in thislist]
+        
+        
+List Comprehension:
+
+    List Comprehension offers a shorter syntax when you want to create a new list based 
+on the values of an existing list.
+
+Example:
+
+    Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+
+Without list comprehension you will have to write a for statement with a conditional test inside:
+
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+Output:
+['apple', 'banana', 'mango']
+
+
+With list comprehension you can do all that with only one line of code:
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+Output:
+
+['apple', 'banana', 'mango']
+
+
+The Syntax for the list comprehension:
+
+newlist = [expression for item in iterable if condition == True]
+
+-->The return value is a new list, leaving the old list unchanged.
+
+The Condition:
+    The condition is like a filter that only accepts the items that valuate to True.
+    
+    Example:
+    
+    Only accept items that are not "apple":
+    
+    newlist = [x for x in fruits if x != "apple"]
+    print(newlist)
+    
+    Output will be:
+    
+    ["banana","cherry","kiwi","mango"]
+    
+Iterable:
+
+    The iterable can be any iterable object, like a list, tuple, set, etc.,
+    
+    Example:
+    
+    We can use range() function to create an iterable:
+    
+    newlist = [x for x in range(10)]
+    print(newlist)
+    Output:
+    [0,1,2,3,4,5,6,7,8,9]
+    
+The above mentioned problem with conditon:
+
+    newlist = [x for x in range(10) if x<5 ]
+    print(newlist)
+    
+    Output will be:
+    [0,1,2,3,4]
+    
+ Expression: -
+ 
+    The expression is the current item in the iteration, but it is also the outcome,
+    which you can manipulate before it ends up like a item in the new list.
+    
+    Example:
+    
+    Set the values in the newlist to upper case:
+    
+    fruits = ["apple","banana","cherry","kiwi","mango"]
+    
+    newlist = [x.upper() for x in fruits]
+    print(newlist)
+    
+    Output will be:
+    
+    ['APPLE','BANANA','CHERRY','KIWI','MANGO']
+    
+    
