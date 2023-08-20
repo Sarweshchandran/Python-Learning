@@ -1,6 +1,12 @@
-n = int(input("Enter the number of list items:"))
-name = []
-def input(n):
+n = int(input("Enter total number of names:"))
+Name = []
+print("\n Enter names: ")
+for i in range(0, n):
     x = input()
-    print(name.append(x))
-input(n)
+Name.append(x)
+
+print("\n Names are:")
+
+for i in range(0, n):
+
+    print(Name[i].capitalize())
