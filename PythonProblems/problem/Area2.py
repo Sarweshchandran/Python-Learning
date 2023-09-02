@@ -13,7 +13,7 @@ class Rectangle:
         return Cube
 
     def perimeter(self):
-        P = 2(self.length+ self.width)
+        P = 2 * (self.length + self.width)
         return P
 
     def function(self):
