@@ -25,5 +25,5 @@ if __name__ == "__main__":
     deduction = int(input("Enter the deduction amount: "))
     bonus = int(input("Enter the Bonus Amount: "))
     p = payroll(name, monthly, deduction, bonus)
-    p.calulatesal()
+    #p.calulatesal()
     p.function()
